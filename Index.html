@@ -10,258 +10,87 @@
 <meta property="og:type" content="website">
 <meta name="robots" content="index, follow">
 <title>Mindzeye Films | Film & Audiovisual Production | Grenada, Caribbean</title>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Mindzeye Films",
   "description": "Film and audiovisual production company based in Grenada, serving the Caribbean and international clients.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "St. George's",
-    "addressCountry": "GD"
-  },
+  "address": {"@type": "PostalAddress","addressLocality": "St. George's","addressCountry": "GD"},
   "areaServed": ["Grenada", "Caribbean", "Trinidad and Tobago", "International"],
-  "foundingDate": "2021",
-  "sameAs": [
-    "https://vimeo.com/mindzeyefilms",
-    "https://www.youtube.com/@mindzeyefilms"
-  ]
+  "foundingDate": "2021"
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --black: #0A0A0A;
-    --card: #141414;
-    --white: #F5F5F0;
-    --red: #C41E1E;
-    --grey: #6B6B6B;
-    --light-grey: #2A2A2A;
-    --border: rgba(255,255,255,0.08);
+    --black: #0A0A0A; --card: #141414; --white: #F5F5F0;
+    --red: #C41E1E; --grey: #6B6B6B; --border: rgba(255,255,255,0.08);
   }
   html { scroll-behavior: smooth; }
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 2.5rem;
-    background: rgba(10,10,10,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--white);
-    text-decoration: none;
-  }
-  .nav-logo span { color: var(--red); }
+  body { background: var(--black); color: var(--white); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo-img { height: 40px; width: auto; object-fit: contain; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    color: var(--grey);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
+  .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
-  .hero {
-    position: relative;
-    height: 100vh;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 2.5rem 4rem;
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.7) 75%, rgba(10,10,10,1) 100%);
-    z-index: 1;
-  }
+
+  .hero { position: relative; height: 100vh; min-height: 600px; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 2.5rem 4rem; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.7) 75%, rgba(10,10,10,1) 100%); z-index: 1; }
   .hero-reel { position: absolute; inset: 0; z-index: 0; }
   .hero-reel iframe { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
   .hero-content { position: relative; z-index: 2; max-width: 900px; }
-  .hero-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 1rem;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    font-weight: 300;
-    line-height: 1.0;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.5rem;
-  }
+  .hero-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 300; line-height: 1.0; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
   .hero h1 em { font-style: italic; color: var(--grey); }
-  .hero-sub {
-    font-size: 1rem;
-    color: var(--grey);
-    max-width: 480px;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-  }
-  .hero-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--red);
-    padding-bottom: 0.25rem;
-    transition: gap 0.2s;
-  }
+  .hero-sub { font-size: 1rem; color: var(--grey); max-width: 480px; line-height: 1.7; margin-bottom: 2.5rem; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--white); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--red); padding-bottom: 0.25rem; transition: gap 0.2s; }
   .hero-cta:hover { gap: 1.25rem; }
+
   .reel-section { padding: 6rem 2.5rem; border-top: 1px solid var(--border); }
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 1.5rem;
-  }
-  .section-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2.5rem;
-  }
-  .reel-embed {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    background: var(--card);
-  }
+  .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; }
+  .section-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 2.5rem; }
+  .reel-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--card); }
   .reel-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
   .reel-links { display: flex; gap: 2rem; margin-top: 1.5rem; }
-  .reel-link {
-    color: var(--grey);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.2s;
-  }
+  .reel-link { color: var(--grey); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
   .reel-link:hover { color: var(--white); }
+
   .services { padding: 6rem 2.5rem; border-top: 1px solid var(--border); }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    margin-top: 3rem;
-    border: 1px solid var(--border);
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); margin-top: 3rem; border: 1px solid var(--border); }
   .service-card { background: var(--black); padding: 2.5rem; transition: background 0.2s; }
   .service-card:hover { background: var(--card); }
-  .service-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--red);
-    opacity: 0.4;
-    line-height: 1;
-    margin-bottom: 1.5rem;
-  }
-  .service-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
+  .service-number { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--red); opacity: 0.4; line-height: 1; margin-bottom: 1.5rem; }
+  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; }
   .service-card p { font-size: 0.9rem; color: var(--grey); line-height: 1.7; }
-  .about {
-    padding: 6rem 2.5rem;
-    border-top: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
+
+  .about { padding: 6rem 2.5rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
   .about-text p { color: var(--grey); line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
   .about-text p strong { color: var(--white); font-weight: 500; }
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
   .stat-block { border-top: 1px solid var(--border); padding-top: 1.5rem; }
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
+  .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--white); line-height: 1; margin-bottom: 0.5rem; }
   .stat-label { font-size: 0.75rem; color: var(--grey); letter-spacing: 0.1em; text-transform: uppercase; }
   .about-team { padding-top: 3rem; }
   .team-member { border-top: 1px solid var(--border); padding: 2rem 0; }
   .team-member:last-child { border-bottom: 1px solid var(--border); }
-  .team-member h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 0.25rem;
-  }
+  .team-member h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 0.25rem; }
   .team-role { font-size: 0.75rem; color: var(--red); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
   .team-member p { font-size: 0.88rem; color: var(--grey); line-height: 1.7; }
+
   .clients { padding: 4rem 2.5rem; border-top: 1px solid var(--border); }
   .clients-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey); margin-bottom: 2rem; }
   .clients-list { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
   .client-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--grey); transition: color 0.2s; }
   .client-name:hover { color: var(--white); }
-  .contact {
-    padding: 6rem 2.5rem;
-    border-top: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-  .contact-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    margin-bottom: 2rem;
-  }
+
+  .contact { padding: 6rem 2.5rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .contact-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 2rem; }
   .contact-heading em { font-style: italic; color: var(--grey); }
   .contact-detail { margin-bottom: 2rem; }
   .contact-detail-label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
@@ -270,51 +99,24 @@
   .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
   .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
   .form-field label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); }
-  .form-field input, .form-field textarea, .form-field select {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--white);
-    padding: 0.875rem 1rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s;
-    resize: vertical;
-  }
+  .form-field input, .form-field textarea, .form-field select { background: var(--card); border: 1px solid var(--border); color: var(--white); padding: 0.875rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; resize: vertical; }
   .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--red); }
   .form-field textarea { min-height: 120px; }
-  .form-submit {
-    background: var(--red);
-    color: var(--white);
-    border: none;
-    padding: 1rem 2rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-    align-self: flex-start;
-  }
+  .form-submit { background: var(--red); color: var(--white); border: none; padding: 1rem 2rem; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; align-self: flex-start; }
   .form-submit:hover { background: #a01818; }
-  footer {
-    padding: 2.5rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em; color: var(--grey); }
-  .footer-logo span { color: var(--red); }
+
+  footer { padding: 2.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo-link { text-decoration: none; }
+  .footer-logo-img { height: 28px; width: auto; object-fit: contain; opacity: 0.7; transition: opacity 0.2s; }
+  .footer-logo-img:hover { opacity: 1; }
   .footer-copy { font-size: 0.78rem; color: var(--grey); }
   .footer-links { display: flex; gap: 1.5rem; }
   .footer-links a { color: var(--grey); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
   .footer-links a:hover { color: var(--white); }
+
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
+
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -331,7 +133,9 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">MINDZEYE<span>.</span>FILMS</a>
+  <a href="#" class="nav-logo">
+    <img src="logo.jpg" alt="Mindzeye Films" class="nav-logo-img">
+  </a>
   <ul class="nav-links">
     <li><a href="#reel">Reel</a></li>
     <li><a href="#services">Services</a></li>
@@ -495,7 +299,9 @@
 </section>
 
 <footer>
-  <div class="footer-logo">MINDZEYE<span>.</span>FILMS</div>
+  <a href="#" class="footer-logo-link">
+    <img src="logo.jpg" alt="Mindzeye Films" class="footer-logo-img">
+  </a>
   <p class="footer-copy">© 2026 Mindzeye Films. St. George's, Grenada, W.I.</p>
   <div class="footer-links">
     <a href="https://vimeo.com/1168676581" target="_blank" rel="noopener">Vimeo</a>
