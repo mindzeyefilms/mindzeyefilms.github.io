@@ -9,7 +9,7 @@
 <meta property="og:description" content="Grenada-based film and audiovisual production company serving the Caribbean and international market.">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="raW2KqphMCorbb0aeNWbvRH0-kbhLCHutNy3WnaU8SQ" />
+<meta name="google-site-verification" content="raW2KqphMCorbb0aeNWbvRH0-kbhLCHutNy3WnaU8SQ" />
 <title>Mindzeye Films | Film & Audiovisual Production | Grenada, Caribbean</title>
 <script type="application/ld+json">
 {
@@ -36,6 +36,11 @@
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .hero { position: relative; height: 100vh; min-height: 600px; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 2.5rem 4rem; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.7) 75%, rgba(10,10,10,1) 100%); z-index: 1; }
   .hero-reel { position: absolute; inset: 0; z-index: 0; }
@@ -108,15 +113,10 @@
   .reveal.visible { opacity: 1; transform: none; }
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s ease; }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.hamburger { display: flex; }
-.nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
-.nav-links.open { display: flex; }
-.nav-links a { font-size: 1rem; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 1rem; }
     .hero { padding: 0 1.5rem 3rem; }
     .reel-section, .services, .clients, .about, .contact { padding: 4rem 1.5rem; }
     .about, .contact { grid-template-columns: 1fr; gap: 3rem; }
@@ -130,12 +130,15 @@
   <a href="#" class="nav-logo">
     <img src="logo.jpg" alt="Mindzeye Films" class="nav-logo-img">
   </a>
-  <ul class="nav-links">
-    <li><a href="#reel">Reel</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="the-frame.html">The Frame</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#reel" onclick="closeMenu()">Reel</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="the-frame.html" onclick="closeMenu()">The Frame</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
 </nav>
 <section class="hero">
@@ -307,6 +310,18 @@
   </div>
 </footer>
 <script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.querySelector('.hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  function closeMenu() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.querySelector('.hamburger');
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  }
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
