@@ -22,6 +22,11 @@
   .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
   .nav-links a.active { color: var(--white); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .page-hero { padding: 10rem 2.5rem 4rem; border-bottom: 1px solid var(--border); }
   .page-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
   .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; line-height: 1.0; margin-bottom: 1.5rem; }
@@ -63,15 +68,10 @@
   .reveal.visible { opacity: 1; transform: none; }
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s ease; }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.hamburger { display: flex; }
-.nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
-.nav-links.open { display: flex; }
-.nav-links a { font-size: 1rem; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: rgba(10,10,10,0.98); padding: 2rem 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 1rem; }
     .page-hero { padding: 8rem 1.5rem 3rem; }
     .gallery { padding: 3rem 1.5rem 4rem; }
     .gallery-grid { columns: 1; }
@@ -85,12 +85,15 @@
   <a href="index.html" class="nav-logo">
     <img src="logo.jpg" alt="Mindzeye Films" class="nav-logo-img">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#reel">Reel</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="the-frame.html" class="active">The Frame</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#reel" onclick="closeMenu()">Reel</a></li>
+    <li><a href="index.html#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+    <li><a href="the-frame.html" class="active" onclick="closeMenu()">The Frame</a></li>
+    <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
 </nav>
 <div class="page-hero">
@@ -174,6 +177,18 @@
     if (e.key === 'ArrowRight') changeImage(1);
     if (e.key === 'ArrowLeft') changeImage(-1);
   });
+  function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.querySelector('.hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  function closeMenu() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.querySelector('.hamburger');
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  }
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
