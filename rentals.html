@@ -85,12 +85,6 @@
   .tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: 1px solid var(--border); padding: 0.2rem 0.5rem; }
   .equipment-note { font-size: 0.78rem; color: var(--grey); margin-bottom: 1rem; font-style: italic; border-top: 1px solid var(--border); padding-top: 0.75rem; }
   .card-spacer { flex: 1; }
-  .gear-img-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
-  .gear-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; background: var(--card); border: 1px solid var(--border); opacity: 0.75; transition: opacity 0.3s; }
-  .equipment-card:hover .gear-img { opacity: 1; }
-  .pack-img-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
-  .pack-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; background: var(--card); border: 1px solid var(--border); opacity: 0.7; transition: opacity 0.3s; }
-  .pack-card:hover .pack-img { opacity: 1; }
   .inquiry-section { margin: 1rem 2.5rem 4rem; background: var(--card); border: 1px solid var(--border); padding: 3rem; }
   .inquiry-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
   .inquiry-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
@@ -231,7 +225,6 @@
   <div class="packs-grid">
     <div class="pack-card reveal" id="pack-vlogger">
       <span class="promo-tag">Introductory Offer</span>
-      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-100d-S_1.png" alt="Amaran 100d" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Vlogger Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -247,7 +240,6 @@
     </div>
     <div class="pack-card reveal" id="pack-starter">
       <span class="promo-tag">Introductory Offer</span>
-      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-COB-60x-S_1.png" alt="Amaran 60x" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Starter Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -264,7 +256,6 @@
     </div>
     <div class="pack-card reveal" id="pack-artistic">
       <span class="promo-tag">Introductory Offer</span>
-      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-300c-white_1.png" alt="Amaran 300c" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Artistic Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -286,7 +277,6 @@
   <p class="rental-section-sub">Aputure and Amaran systems — hire individually or combine with accessories</p>
   <div class="equipment-grid">
     <div class="equipment-card reveal" id="item-mc">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/MC-4.png?v=1696907400" alt="Aputure MC" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure MC Magnetic Light (RGB)</p>
       <p class="equipment-qty">Qty available: 7</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">Compact</span><span class="tag">Magnetic</span></div>
@@ -295,7 +285,6 @@
       <button class="add-btn" onclick="toggleItem('item-mc', 'Aputure MC Magnetic Light (RGB)')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-60x">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-COB-60x-S_1.png" alt="Amaran 60x" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 60x (Bi-Color)</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Bi-Color</span><span class="tag">LED</span></div>
@@ -304,7 +293,6 @@
       <button class="add-btn" onclick="toggleItem('item-60x', 'Amaran 60x (Bi-Color)')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-100d">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-100d-S_1.png" alt="Amaran 100d" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 100d</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Daylight</span><span class="tag">LED</span></div>
@@ -312,7 +300,6 @@
       <button class="add-btn" onclick="toggleItem('item-100d', 'Amaran 100d')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-300c">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-300c-white_1.png" alt="Amaran 300c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 300c (RGB)</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">High-Output</span></div>
@@ -321,7 +308,6 @@
       <button class="add-btn" onclick="toggleItem('item-300c', 'Amaran 300c (RGB)')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-660c">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaran-Ray-660c_1.png" alt="Amaran Ray 660c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran Ray 660c</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">High-Power</span></div>
@@ -330,7 +316,6 @@
       <button class="add-btn" onclick="toggleItem('item-660c', 'Amaran Ray 660c')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-rf10c">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/Aputure_Spotlight_SE_-_Banner_v1.png" alt="SmallRig RF10c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">SmallRig RF10c Torch</p>
       <p class="equipment-qty">Qty available: 2</p>
       <div class="equipment-tags"><span class="tag">4 Colors</span><span class="tag">10W</span></div>
@@ -339,7 +324,6 @@
       <button class="add-btn" onclick="toggleItem('item-rf10c', 'SmallRig RF10c Torch')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-spotlight">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/spotlight-se-1.png" alt="Spotlight SE" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure Spotlight SE with 36° Lens Kit</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Spotlight</span><span class="tag">Gobo Included</span></div>
@@ -347,7 +331,6 @@
       <button class="add-btn" onclick="toggleItem('item-spotlight', 'Aputure Spotlight SE with 36° Lens Kit')">+ Add to Enquiry</button>
     </div>
     <div class="equipment-card reveal" id="item-dome">
-      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/Light-Dome-SE-front.png" alt="Light Dome SE" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure Light Dome SE</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Softbox</span><span class="tag">Dome</span></div>
