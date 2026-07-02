@@ -27,6 +27,8 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* HERO */
   .page-hero { padding: 10rem 2.5rem 4rem; border-bottom: 1px solid var(--border); }
   .rentals-logo { height: 60px; width: auto; object-fit: contain; margin-bottom: 2rem; display: block; }
   .page-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
@@ -39,9 +41,13 @@
   .audience-tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: 1px solid var(--border); padding: 0.3rem 0.8rem; }
   .growing-note { font-size: 0.78rem; color: var(--grey); font-style: italic; }
   .growing-note span { color: var(--gold); }
+
+  /* PROMO BANNER */
   .promo-banner { background: var(--gold); padding: 1rem 2.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
   .promo-banner p { font-size: 0.85rem; font-weight: 600; color: var(--black); letter-spacing: 0.05em; text-transform: uppercase; }
   .promo-banner span { font-size: 0.78rem; color: rgba(0,0,0,0.6); font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+  /* BOOKING NOTE */
   .rental-note { padding: 1.5rem 2.5rem; background: var(--card); border-bottom: 1px solid var(--border); }
   .rental-note p { font-size: 0.85rem; color: var(--grey); line-height: 1.7; }
   .rental-note p strong { color: var(--white); }
@@ -49,16 +55,22 @@
   .contact-item { font-size: 0.8rem; color: var(--grey); }
   .contact-item a { color: var(--white); text-decoration: none; transition: color 0.2s; }
   .contact-item a:hover { color: var(--red); }
+
+  /* HOW IT WORKS */
   .how-it-works { padding: 3rem 2.5rem; border-bottom: 1px solid var(--border); display: flex; gap: 3rem; flex-wrap: wrap; }
   .how-step { display: flex; align-items: flex-start; gap: 1rem; flex: 1; min-width: 200px; }
   .how-step-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--red); opacity: 0.6; line-height: 1; flex-shrink: 0; }
   .how-step-text h4 { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 0.25rem; }
   .how-step-text p { font-size: 0.8rem; color: var(--grey); line-height: 1.6; }
+
+  /* SECTIONS */
   .packs-section { padding: 4rem 2.5rem 2rem; }
   .section-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.1; margin-bottom: 0.5rem; }
   .section-title em { font-style: italic; color: var(--grey); }
   .section-sub { font-size: 0.85rem; color: var(--grey); margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+
+  /* PACKS */
   .packs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 1rem; }
   .pack-card { background: var(--black); padding: 2rem; transition: background 0.2s; position: relative; }
   .pack-card.selected { background: var(--card); border: 1px solid var(--red); }
@@ -70,9 +82,13 @@
   .pack-includes ul li::before { content: '—'; position: absolute; left: 0; color: var(--red); }
   .promo-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--gold); color: var(--black); padding: 0.2rem 0.6rem; margin-bottom: 0.75rem; font-weight: 600; }
   .enquire-rate { font-size: 0.75rem; color: var(--grey); font-style: italic; margin-bottom: 1rem; }
+
+  /* ADD TO ENQUIRY BUTTON */
   .add-btn { width: 100%; padding: 0.75rem 1rem; background: transparent; border: 1px solid var(--border); color: var(--grey); font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; text-align: center; }
   .add-btn:hover { border-color: var(--red); color: var(--white); }
   .add-btn.added { background: var(--red); border-color: var(--red); color: var(--white); }
+
+  /* EQUIPMENT */
   .rental-section { padding: 3rem 2.5rem 2rem; }
   .rental-section-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--white); margin-bottom: 0.5rem; }
   .rental-section-sub { font-size: 0.8rem; color: var(--grey); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
@@ -85,6 +101,14 @@
   .tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); border: 1px solid var(--border); padding: 0.2rem 0.5rem; }
   .equipment-note { font-size: 0.78rem; color: var(--grey); margin-bottom: 1rem; font-style: italic; border-top: 1px solid var(--border); padding-top: 0.75rem; }
   .card-spacer { flex: 1; }
+  .gear-img-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
+  .gear-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; background: var(--card); border: 1px solid var(--border); opacity: 0.75; transition: opacity 0.3s; }
+  .equipment-card:hover .gear-img { opacity: 1; }
+  .pack-img-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
+  .pack-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; background: var(--card); border: 1px solid var(--border); opacity: 0.7; transition: opacity 0.3s; }
+  .pack-card:hover .pack-img { opacity: 1; }
+
+  /* INQUIRY SECTION */
   .inquiry-section { margin: 1rem 2.5rem 4rem; background: var(--card); border: 1px solid var(--border); padding: 3rem; }
   .inquiry-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
   .inquiry-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
@@ -94,6 +118,8 @@
   .inquiry-cat { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); border: 1px solid var(--border); padding: 0.4rem 1rem; }
   .cta-btn { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--red); color: var(--white); text-decoration: none; padding: 1rem 2.5rem; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; transition: background 0.2s; border: none; cursor: pointer; font-family: 'Inter', sans-serif; }
   .cta-btn:hover { background: #a01818; }
+
+  /* ENQUIRY TRAY */
   .enquiry-tray { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: rgba(10,10,10,0.97); border-top: 1px solid var(--red); padding: 1rem 2.5rem; display: none; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; backdrop-filter: blur(12px); }
   .enquiry-tray.visible { display: flex; }
   .tray-info { display: flex; align-items: center; gap: 1rem; }
@@ -105,6 +131,8 @@
   .tray-clear:hover { color: var(--white); }
   .tray-submit { background: var(--red); color: var(--white); border: none; padding: 0.75rem 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
   .tray-submit:hover { background: #a01818; }
+
+  /* ENQUIRY MODAL */
   .enquiry-modal { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,10,10,0.95); justify-content: center; align-items: center; padding: 2rem; }
   .enquiry-modal.open { display: flex; }
   .modal-box { background: var(--card); border: 1px solid var(--border); padding: 2.5rem; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; }
@@ -127,6 +155,8 @@
   .modal-success { display: none; text-align: center; padding: 2rem 0; }
   .modal-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 0.75rem; }
   .modal-success p { font-size: 0.85rem; color: var(--grey); line-height: 1.7; }
+
+  /* FOOTER */
   footer { padding: 2.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
   .footer-logo-link { text-decoration: none; }
   .footer-logo-img { height: 28px; width: auto; object-fit: contain; opacity: 0.7; transition: opacity 0.2s; }
@@ -138,6 +168,7 @@
   .social-icon svg { width: 14px; height: 14px; fill: currentColor; }
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
+
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .hamburger { display: flex; }
@@ -159,6 +190,7 @@
 </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="logo.jpg" alt="Mindzeye Films" class="nav-logo-img">
@@ -176,6 +208,8 @@
     <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
 </nav>
+
+<!-- HERO -->
 <div class="page-hero">
   <img src="rentals-logo.png" alt="Mindzeye Rentals" class="rentals-logo reveal">
   <p class="page-eyebrow">Equipment Hire — Grenada</p>
@@ -193,9 +227,13 @@
   </div>
   <p class="growing-note reveal">Our inventory is <span>growing</span> — more equipment categories coming soon.</p>
 </div>
+
+<!-- PROMO BANNER -->
 <div class="promo-banner">
   <p>Introductory Deal — Rent 3 Days, Get 1 Free! <span>Applies to selected items and packs. Contact us for details.</span></p>
 </div>
+
+<!-- BOOKING NOTE -->
 <div class="rental-note">
   <p><strong>How to book:</strong> Select the items you are interested in using the Add to Enquiry buttons below. When you are ready, submit your enquiry and we will respond with availability and rates.</p>
   <div class="contact-line">
@@ -204,6 +242,8 @@
     <span class="contact-item">📷 <a href="https://www.instagram.com/mindzeye_rentals" target="_blank" rel="noopener">@mindzeye_rentals</a></span>
   </div>
 </div>
+
+<!-- HOW IT WORKS -->
 <div class="how-it-works">
   <div class="how-step">
     <div class="how-step-num">01</div>
@@ -218,13 +258,17 @@
     <div class="how-step-text"><h4>Confirm & Book</h4><p>Once agreed, a refundable deposit secures your booking. Collect on your shoot day.</p></div>
   </div>
 </div>
+
+<!-- BUNDLE PACKS -->
 <div class="packs-section">
   <p class="section-eyebrow reveal">Best Value</p>
   <h2 class="section-title reveal">Lighting <em>Packs</em></h2>
   <p class="section-sub reveal">Curated bundles for common production scenarios — enquire for rates</p>
   <div class="packs-grid">
+
     <div class="pack-card reveal" id="pack-vlogger">
       <span class="promo-tag">Introductory Offer</span>
+      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaran100dS-4.png?v=1710517422" alt="Amaran 100d" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Vlogger Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -238,8 +282,10 @@
       <p class="enquire-rate">Rates on enquiry — multi-day discounts available</p>
       <button class="add-btn" onclick="toggleItem('pack-vlogger', 'Vlogger Pack')">+ Add to Enquiry</button>
     </div>
+
     <div class="pack-card reveal" id="pack-starter">
       <span class="promo-tag">Introductory Offer</span>
+      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaranCOB60xS-4.png?v=1710517405" alt="Amaran 60x" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Starter Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -254,8 +300,10 @@
       <p class="enquire-rate">Rates on enquiry — multi-day discounts available</p>
       <button class="add-btn" onclick="toggleItem('pack-starter', 'Starter Pack')">+ Add to Enquiry</button>
     </div>
+
     <div class="pack-card reveal" id="pack-artistic">
       <span class="promo-tag">Introductory Offer</span>
+      <div class="pack-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaran300c-_-4.png?v=1710517097" alt="Amaran 300c" class="pack-img" onerror="this.style.display='none'"></div>
       <h3 class="pack-name">Artistic Pack</h3>
       <div class="pack-includes">
         <p class="pack-includes-label">Includes</p>
@@ -270,13 +318,18 @@
       <p class="enquire-rate">Rates on enquiry — multi-day discounts available</p>
       <button class="add-btn" onclick="toggleItem('pack-artistic', 'Artistic Pack')">+ Add to Enquiry</button>
     </div>
+
   </div>
 </div>
+
+<!-- INDIVIDUAL LIGHTING -->
 <div class="rental-section">
   <h2 class="rental-section-title reveal">Individual Lighting Units</h2>
   <p class="rental-section-sub">Aputure and Amaran systems — hire individually or combine with accessories</p>
   <div class="equipment-grid">
+
     <div class="equipment-card reveal" id="item-mc">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/MC-4.png?v=1696907400" alt="Aputure MC" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure MC Magnetic Light (RGB)</p>
       <p class="equipment-qty">Qty available: 7</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">Compact</span><span class="tag">Magnetic</span></div>
@@ -284,7 +337,9 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-mc', 'Aputure MC Magnetic Light (RGB)')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-60x">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaranCOB60xS-4.png?v=1710517405" alt="Amaran 60x" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 60x (Bi-Color)</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Bi-Color</span><span class="tag">LED</span></div>
@@ -292,14 +347,18 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-60x', 'Amaran 60x (Bi-Color)')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-100d">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaran100dS-4.png?v=1710517422" alt="Amaran 100d" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 100d</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Daylight</span><span class="tag">LED</span></div>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-100d', 'Amaran 100d')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-300c">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/products/amaran300c-_-4.png?v=1710517097" alt="Amaran 300c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran 300c (RGB)</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">High-Output</span></div>
@@ -307,7 +366,9 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-300c', 'Amaran 300c (RGB)')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-660c">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/0862/5432/1947/files/amaranRay660c-5.png?v=1763019086" alt="Amaran Ray 660c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Amaran Ray 660c</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">RGB</span><span class="tag">High-Power</span></div>
@@ -315,7 +376,9 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-660c', 'Amaran Ray 660c')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-rf10c">
+      <div class="gear-img-wrap"><img src="https://static.smallrig.com/mall/img/public/gpp71ixg2w5-1776831471741_.jpg" alt="SmallRig RF10c" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">SmallRig RF10c Torch</p>
       <p class="equipment-qty">Qty available: 2</p>
       <div class="equipment-tags"><span class="tag">4 Colors</span><span class="tag">10W</span></div>
@@ -323,26 +386,34 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-rf10c', 'SmallRig RF10c Torch')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-spotlight">
+      <div class="gear-img-wrap"><img src="https://www.amarancreators.com/cdn/shop/files/14A8337-scaled-e1681667641243-1000x750.webp" alt="Spotlight SE" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure Spotlight SE with 36° Lens Kit</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Spotlight</span><span class="tag">Gobo Included</span></div>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-spotlight', 'Aputure Spotlight SE with 36° Lens Kit')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-dome">
+      <div class="gear-img-wrap"><img src="https://cdn.shopify.com/s/files/1/1343/1935/files/Light-Dome-SE_1_3.png?v=1696907400" alt="Light Dome SE" class="gear-img" onerror="this.style.display='none'"></div>
       <p class="equipment-name">Aputure Light Dome SE</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="equipment-tags"><span class="tag">Softbox</span><span class="tag">Dome</span></div>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-dome', 'Aputure Light Dome SE')">+ Add to Enquiry</button>
     </div>
+
   </div>
 </div>
+
+<!-- LIGHTING ACCESSORIES -->
 <div class="rental-section" style="padding-top: 0;">
   <h2 class="rental-section-title reveal">Lighting Accessories</h2>
   <p class="rental-section-sub">Stands, mounts, modifiers and grip</p>
   <div class="equipment-grid">
+
     <div class="equipment-card reveal" id="item-gobos">
       <p class="equipment-name">Gobo Mounts</p>
       <p class="equipment-qty">Qty available: 15</p>
@@ -350,32 +421,39 @@
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-gobos', 'Gobo Mounts')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-iris">
       <p class="equipment-name">Iris for Spotlight SE</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-iris', 'Iris for Spotlight SE')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-stands">
       <p class="equipment-name">Light Stands</p>
       <p class="equipment-qty">Qty available: 2</p>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-stands', 'Light Stands')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-cstands">
       <p class="equipment-name">C-Stands</p>
       <p class="equipment-qty">Qty available: 1</p>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-cstands', 'C-Stands')">+ Add to Enquiry</button>
     </div>
+
     <div class="equipment-card reveal" id="item-sandbags">
       <p class="equipment-name">Sandbags</p>
       <p class="equipment-qty">Qty available: 3 (2x Small, 1x Medium)</p>
       <div class="card-spacer"></div>
       <button class="add-btn" onclick="toggleItem('item-sandbags', 'Sandbags')">+ Add to Enquiry</button>
     </div>
+
   </div>
 </div>
+
+<!-- OTHER GEAR INQUIRY -->
 <div class="inquiry-section reveal">
   <p class="inquiry-eyebrow">More Equipment Available</p>
   <h2 class="inquiry-title">Need cameras, sound,<br><em>drone or accessories?</em></h2>
@@ -392,6 +470,7 @@
   </div>
   <a href="mailto:mindzeyeimagery@gmail.com" class="cta-btn">Enquire about gear →</a>
 </div>
+
 <footer>
   <a href="index.html" class="footer-logo-link">
     <img src="logo.jpg" alt="Mindzeye Films" class="footer-logo-img">
@@ -415,6 +494,8 @@
     </a>
   </div>
 </footer>
+
+<!-- ENQUIRY TRAY -->
 <div class="enquiry-tray" id="enquiry-tray">
   <div class="tray-info">
     <span class="tray-count" id="tray-count">0</span>
@@ -426,6 +507,8 @@
     <button class="tray-submit" onclick="openModal()">Submit Enquiry →</button>
   </div>
 </div>
+
+<!-- ENQUIRY MODAL -->
 <div class="enquiry-modal" id="enquiry-modal">
   <div class="modal-box">
     <div id="modal-form-wrap">
@@ -468,8 +551,10 @@
     </div>
   </div>
 </div>
+
 <script>
   const selectedItems = {};
+
   function toggleItem(id, name) {
     const card = document.getElementById(id);
     const btn = card.querySelector('.add-btn');
@@ -486,6 +571,7 @@
     }
     updateTray();
   }
+
   function updateTray() {
     const keys = Object.keys(selectedItems);
     const tray = document.getElementById('enquiry-tray');
@@ -495,6 +581,7 @@
     items.textContent = keys.map(k => selectedItems[k]).join(' · ');
     tray.classList.toggle('visible', keys.length > 0);
   }
+
   function clearAll() {
     Object.keys(selectedItems).forEach(id => {
       const card = document.getElementById(id);
@@ -508,16 +595,19 @@
     });
     updateTray();
   }
+
   function openModal() {
     const list = document.getElementById('modal-selected-list');
     list.innerHTML = Object.values(selectedItems).map(n => `<li>${n}</li>`).join('');
     document.getElementById('enquiry-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
+
   function closeModal() {
     document.getElementById('enquiry-modal').classList.remove('open');
     document.body.style.overflow = '';
   }
+
   document.getElementById('rental-enquiry-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('.cta-btn');
@@ -545,9 +635,11 @@
       btn.disabled = false;
     }
   });
+
   document.getElementById('enquiry-modal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
+
   function toggleMenu() {
     const nav = document.getElementById('nav-links');
     const btn = document.querySelector('.hamburger');
